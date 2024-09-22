@@ -1,0 +1,281 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Raleway', 'Arial';
+}
+
+html,
+body {
+	height: 100%;
+	
+}
+
+.hero-text-block,
+.img-wrapper img {
+	opacity: 0;
+	animation: fadeIn 2s forwards;
+}
+
+#mission,
+#mission-add,
+#customers,
+#contacts {
+	opacity: 0;
+	animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.navbar {
+	height: 10vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	
+}
+
+.nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.nav-logo {
+	max-width: 80px;
+	margin-top: 0.7em;
+}
+
+.nav-links {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+	justify-content: flex-end;
+}
+
+.link {
+	margin-left: 20px;
+}
+
+.link a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	transition: color 0.3s ease-in-out;
+}
+
+.link a:hover {
+	color: #FFD336;
+}
+
+#lang-ru,
+#lang-en {
+	cursor: pointer;
+	margin-left: 20px;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+#lang-ru:hover,
+#lang-en:hover {
+	color: #FFD336;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: left;
+	align-items: center;
+	padding: 20px;
+	scroll-snap-align: start;
+}
+
+.img-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-self: flex-start;
+	padding-top: 7%;
+	gap: 40px;
+	
+}
+
+.img-wrapper img {
+	max-width: 17vw;
+	width: 100%;
+	height: auto;
+}
+
+.hero-text-block h1 {
+	font-size: 56px;
+	text-transform: uppercase;
+}
+
+.hero-text-block div {
+	font-size: 24px;
+	margin: 10px 0;
+	padding-bottom: 5%;
+}
+
+.download-btn,
+.add-app-btn {
+	border: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	border: solid 2px #FFD336;
+	color: #ffffff;
+	background-color: #000000;
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+.download-btn:hover,
+.add-app-btn:hover {
+	background-color: #FFD336;
+	color: #000000;
+}
+
+#mission {
+	padding: 5%;
+}
+
+#mission h2 {
+	font-size: 56px;
+}
+
+.side-text {
+	max-width: 60vw;
+}
+.side-text-block {
+	font-size: 24px;
+	margin: 20px auto 20px auto;
+	line-height: 1.5;
+}
+
+.mission-add {
+	height: 50vh;
+}
+
+.mission-add-block {
+	text-align: center;
+	margin: auto 15%;
+}
+
+.mission-add-block h2 {
+	font-size: 56px;
+	text-transform: uppercase;
+	padding-bottom: 1em;
+}
+
+.mission-add-block div {
+	font-size: 24px;
+	line-height: 1.5;
+}
+
+#customers {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 50px;
+}
+
+.customers-header {
+	font-size: 56px;
+}
+
+.customers-container {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.customers-block {
+	flex: 1;
+	max-width: 300px;
+	text-align: center;
+	margin: 10px;
+}
+
+.customers-block h3 {
+	font-size: 40px;
+}
+
+.customers-block div {
+	margin: 10% auto;
+	font-size: 24px;
+}
+
+.customers-licence a{
+	font-size: 24px;
+	color: #FFD336;
+}
+
+.customers-licence a:hover {
+	color: #ffffff;
+}
+
+#contacts {
+	height: 15vh;
+}
+
+.contact-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 24px;
+	margin: 2em 1em auto 1em;
+}
+
+
+.contact-team-name {
+	font-weight: 800;
+	color: #FFD336;
+}
+
+@media (max-width: 768px) {
+.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.nav-links {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.link {
+		margin: 5px 10%;
+	}
+
+	.link a {
+		padding: 10px;
+		font-size: 20px;
+	}
+
+	.hero {
+		margin-top: 10vh;
+	}
+}
